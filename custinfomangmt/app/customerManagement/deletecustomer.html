@@ -1,0 +1,105 @@
+
+<div class="container">
+	<h2>Find Form</h2>
+
+	<form *ngIf!="edit" (ngSubmit)="onSubmit()" #CusForm="ngForm">
+		<div class="form-group">
+			<label for="firstName">FirstName</label> <input type="text"
+				class="form-control" required [(ngModel)]="model.firstName">
+		</div>
+		<div class="form-group">
+			<label for="lastName">LastName</label> <input type="text"
+				class="form-control" required [(ngModel)]="model.lastName">
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
+<form>
+	<ul>
+		<li *ngFor="#cus of customer"
+			[class.selected]="cus === selectedCustomer" (click)="onSelect(cus)">
+			<button type="button" class="btn btn-success">
+				{{cus.firstName}} {{cus.lastName}} {{cus.middleName}} <span
+					class="badge"></span>
+			</button>
+
+		</li>
+	</ul>
+</form>
+
+<!-- THIS IS TO POPULATE UPDATE SCREEN -->
+
+<form *ngIf="edit" (ngSubmit)="onDelete()" #CusFormUpdate="ngForm">
+	<div class="form-group">
+		<label for="firstName ">First Name </label> <input type="text"
+			class="form-control"
+			required
+            [(ngModel)]="model.firstName"
+			ngControl="firstName" #firstName="ngForm"> First Name is
+		required
+	</div>
+          <div class="form-group">
+            <label for="lastName ">Last Name  </label>
+            <input type="text" ng-value="lastName" class="form-control" required
+            [(ngModel)]="model.lastName"
+            ngControl="lastName"  #lastName="ngForm"> 
+       
+        Last Name is required</div>
+        
+           <div class="form-group">
+            <label for="middleName">Middle Name</label>
+            <input type="text" class="form-control"
+            [(ngModel)]="model.middleName"
+            ngControl="middleName"  #middleName="ngForm">
+          </div>
+          <div class="form-group">
+            <label for="emailId">Email Id  </label>
+            <input type="text" class="form-control"
+            [(ngModel)]="model.emailId"
+            ngControl="emailId"  #emailId="ngForm">
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="float" class="form-control"
+            [(ngModel)]="model.phoneNumber"
+            ngControl="phoneNumber"  #phoneNumber="ngForm">
+          </div> 	
+          <div class="form-group">
+            <label for="houseNumber">House Number</label>
+            <input type="text" class="form-control"
+             [(ngModel)]="model.houseNumber"
+            ngControl="houseNumber"  #houseNumber="ngForm">
+          
+          </div>
+          <div class="form-group">
+            <label for="addressLine1">Address Line1</label>
+            <input type="text" class="form-control"
+             [(ngModel)]="model.addressLine1"
+            ngControl="addressLine1"  #addressLine1="ngForm">
+          
+          </div>
+          <div class="form-group">
+            <label for="addressLine2">Address Line2</label>
+            <input type="text" class="form-control"
+            [(ngModel)]="model.addressLine2"
+            ngControl="addressLine2"  #addressLine2="ngForm">
+          
+          
+          </div>	
+		  <div class="form-group">
+            <label for="cityName">City Name</label>
+            <input type="text" class="form-control"
+            [(ngModel)]="model.cityName"
+            ngControl="cityName"  #cityName="ngForm">
+          
+          </div>	
+		  		  <div class="form-group">
+            <label for="pinCode">Pin Code</label>
+            <input type="float" class="form-control"
+            [(ngModel)]="model.pinCode"
+            ngControl="pinCode"  #pinCode="ngForm">
+          
+          </div>
+           <button (click)="submit">Delete</button>
+          <button type="button" class="btn btn-default" (click)="edit=false">Cancel</button>
+</form>

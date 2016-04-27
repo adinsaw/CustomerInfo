@@ -1,0 +1,94 @@
+<form *ngIf="noTransaction">
+
+		<button type="button" class="btn btn-default">
+			New Transaction <span class="badge"
+				(click)="NewTransaction()"></span>
+		</button>
+
+</form>
+
+<form *ngIf!="transactionEdit" (ngSubmit)="onUpdate()"
+	#CusFormUpdate="ngForm">
+
+
+
+	<ul>
+		<li *ngFor="#cusT of model.customerTransaction"
+			[class.selected]="cusT === selectedTransaction"
+			(click)="onSelectTransactionDetails(cusT)">
+			<button type="button" class="btn btn-default">
+				{{cusT.transactionDate}} <span class="badge"></span>
+			</button>
+
+
+		</li>
+
+	</ul>
+
+</form>
+
+<form *ngIf="transactionEdit" #CusFormUpdate="ngForm">
+
+
+
+	<button (click)="transactionEdit=false">GoBack</button>
+
+	<div class="form-group">
+
+
+		<button type="button" class="btn btn-default">
+			{{modelTransaction.transactionDate}} <span class="badge"
+				(click)="onGoBack()"></span>
+		</button>
+		<button type="button" class="btn btn-default">
+			New Transaction <span class="badge"
+				(click)="NewTransaction()"></span>
+		</button>
+
+		<ul>
+			<li *ngFor="#cusP of modelTransaction.customerProductInformation"
+				[class.selected]="cusP === selectedProduct"
+				(click)="productDetail(cusP)">
+				<button type="button" class="btn btn-default">
+					{{cusP.productDescription}} <span class="badge"></span>
+				</button>
+
+
+			</li>
+			<form *ngIf="productDetails" (ngSubmit)="onUpdate123()"
+				#CusFormUpdate="ngForm">
+
+				<div class="form-group">
+					<label for="productId ">Product Id </label> <input type="text"
+						class="form-control"
+						required
+            [(ngModel)]="selectedProduct.productId"
+						ngControl="productId" #productId="ngForm">
+				</div>
+				<div class="form-group">
+					<label for="productDescription ">Product Description </label> <input
+						type="text" class="form-control"
+						required
+            [(ngModel)]="selectedProduct.productDescription"
+						ngControl="productDescription" #productDescription="ngForm">
+				</div>
+				<div class="form-group">
+					<label for="productName ">Product Name </label> <input type="text"
+						class="form-control"
+						required
+            [(ngModel)]="selectedProduct.productName"
+						ngControl="productName" #productName="ngForm">
+				</div>
+				<div class="form-group">
+					<label for="quantity ">Quantity</label> <input type="text"
+						class="form-control"
+						required
+            [(ngModel)]="selectedProduct.quantity"
+						ngControl="quantity" #quantity="ngForm">
+				</div>
+				<button (click)="submit">Update</button>
+
+				<button (click)="productDetails=false">Cancel</button>
+
+			</form>
+		</ul>
