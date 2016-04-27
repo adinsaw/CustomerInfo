@@ -1,0 +1,53 @@
+Manifest-Version: 1.0
+Implementation-Title: CustomerInformationManagement
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: hcl
+Implementation-Vendor-Id: CustomerInformationManagement
+Class-Path: lib/dropwizard-core-0.9.2.jar lib/dropwizard-util-0.9.2.ja
+ r lib/jackson-annotations-2.6.0.jar lib/guava-18.0.jar lib/jsr305-3.0
+ .1.jar lib/joda-time-2.9.jar lib/dropwizard-jackson-0.9.2.jar lib/jac
+ kson-databind-2.6.3.jar lib/jackson-datatype-jdk7-2.6.3.jar lib/jacks
+ on-datatype-guava-2.6.3.jar lib/jackson-module-afterburner-2.6.3.jar 
+ lib/jackson-datatype-joda-2.6.3.jar lib/slf4j-api-1.7.12.jar lib/logb
+ ack-classic-1.1.3.jar lib/dropwizard-validation-0.9.2.jar lib/hiberna
+ te-validator-5.2.2.Final.jar lib/validation-api-1.1.0.Final.jar lib/c
+ lassmate-1.1.0.jar lib/javax.el-3.0.0.jar lib/dropwizard-configuratio
+ n-0.9.2.jar lib/jackson-dataformat-yaml-2.6.3.jar lib/snakeyaml-1.15.
+ jar lib/commons-lang3-3.4.jar lib/dropwizard-logging-0.9.2.jar lib/me
+ trics-logback-3.1.2.jar lib/jul-to-slf4j-1.7.12.jar lib/logback-core-
+ 1.1.3.jar lib/log4j-over-slf4j-1.7.12.jar lib/jcl-over-slf4j-1.7.12.j
+ ar lib/jetty-util-9.2.13.v20150730.jar lib/dropwizard-metrics-0.9.2.j
+ ar lib/dropwizard-jersey-0.9.2.jar lib/jersey-server-2.22.1.jar lib/j
+ ersey-common-2.22.1.jar lib/jersey-guava-2.22.1.jar lib/osgi-resource
+ -locator-1.0.1.jar lib/jersey-client-2.22.1.jar lib/javax.ws.rs-api-2
+ .0.1.jar lib/jersey-media-jaxb-2.22.1.jar lib/javax.annotation-api-1.
+ 2.jar lib/hk2-api-2.4.0-b31.jar lib/hk2-utils-2.4.0-b31.jar lib/aopal
+ liance-repackaged-2.4.0-b31.jar lib/javax.inject-2.4.0-b31.jar lib/hk
+ 2-locator-2.4.0-b31.jar lib/jersey-metainf-services-2.22.1.jar lib/je
+ rsey-bean-validation-2.22.1.jar lib/metrics-jersey2-3.1.2.jar lib/jac
+ kson-jaxrs-json-provider-2.6.3.jar lib/jackson-jaxrs-base-2.6.3.jar l
+ ib/jackson-module-jaxb-annotations-2.6.3.jar lib/jersey-container-ser
+ vlet-2.22.1.jar lib/jersey-container-servlet-core-2.22.1.jar lib/jett
+ y-server-9.2.13.v20150730.jar lib/javax.servlet-api-3.1.0.jar lib/jet
+ ty-io-9.2.13.v20150730.jar lib/jetty-webapp-9.2.13.v20150730.jar lib/
+ jetty-xml-9.2.13.v20150730.jar lib/jetty-continuation-9.2.13.v2015073
+ 0.jar lib/dropwizard-servlets-0.9.2.jar lib/metrics-annotation-3.1.2.
+ jar lib/dropwizard-jetty-0.9.2.jar lib/metrics-jetty9-3.1.2.jar lib/j
+ etty-servlet-9.2.13.v20150730.jar lib/jetty-security-9.2.13.v20150730
+ .jar lib/jetty-servlets-9.2.13.v20150730.jar lib/jetty-http-9.2.13.v2
+ 0150730.jar lib/dropwizard-lifecycle-0.9.2.jar lib/metrics-core-3.1.2
+ .jar lib/metrics-jvm-3.1.2.jar lib/metrics-servlets-3.1.2.jar lib/met
+ rics-json-3.1.2.jar lib/metrics-healthchecks-3.1.2.jar lib/argparse4j
+ -0.6.0.jar lib/jetty-setuid-java-1.0.3.jar lib/mysql-connector-java-5
+ .1.6.jar lib/jquery-2.1.4.jar lib/jackson-core-2.7.3.jar lib/hibernat
+ e-entitymanager-4.0.1.Final.jar lib/jboss-transaction-api_1.1_spec-1.
+ 0.0.Final.jar lib/dom4j-1.6.1.jar lib/xml-apis-1.0.b2.jar lib/hiberna
+ te-core-4.0.1.Final.jar lib/commons-collections-3.2.1.jar lib/antlr-2
+ .7.7.jar lib/hibernate-jpa-2.0-api-1.0.1.Final.jar lib/jboss-logging-
+ 3.1.0.CR2.jar lib/javassist-3.15.0-GA.jar lib/hibernate-commons-annot
+ ations-4.0.1.Final.jar lib/hibernate-jpa-2.1-api-1.0.0.Final.jar lib/
+ gson-1.4.jar
+Build-Jdk: 1.8.0_73
+Created-By: Maven Integration for Eclipse
+Main-Class: com.customer.main.CustomerService
+
